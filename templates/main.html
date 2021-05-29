@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<style>
+form {
+    margin: auto;
+    width: 35%;
+}
+
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+<head>
+<title>Malicious link detector</title>
+</head>
+<body style="background-color:powderblue;">
+</body>
+<font size="6"><center><h1>MALICIOUS LINK DETECTION</h1></center></font>
+
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>LINK NAME:</legend>
+        Link:
+        <input name="link" type="text" required>
+        <br><br>
+        <input type ="Submit">
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+    
+	Link is:
+   		<p style="font-size:50px">{{ output }}</p>
+    
+</div>
+</html>
